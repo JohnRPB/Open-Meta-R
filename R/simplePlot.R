@@ -10,6 +10,6 @@
 
 simplePlot <- function(x, y) {
   df <- data.frame(x = x, y = y)
-  ggplot2::ggplot(data = df, aes(x = x, y =y)) + geom_line()
+  ggplot2::ggplot(data = df, ggplot2::aes(x = x, y =y)) + ggplot2::geom_line()
 }
 
