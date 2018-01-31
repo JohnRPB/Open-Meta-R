@@ -16,5 +16,9 @@ This function was created to allow you to test the OpenCPU service
 }
 \examples{
 test_plot()
+--------------------------------------------------------------------
+TEST
+PREFERENCES
+--------------------------------------------------------------------
 }
 \keyword{ocpu}
