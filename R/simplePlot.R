@@ -1,8 +1,7 @@
 #' A test function
 #'
 #' This function was created to allow you to test the OpenCPU service
-#' @param x x-variable
-#' @param y y-variable
+#' @param df json array
 #' @keywords ocpu
 #' @export
 #' @examples

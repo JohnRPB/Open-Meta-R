@@ -4,12 +4,11 @@
 \alias{simplePlot}
 \title{A test function}
 \usage{
-simplePlot(x, y)
+
+  simplePlot(json = "~/Documents/SoftwareDevelopment/VikingCodeSchool/final_project/openMeta/src/dbstudiesJSON.json")
 }
 \arguments{
-\item{x}{x-variable}
-
-\item{y}{y-variable}
+\item{df}{json array}
 }
 \description{
 This function was created to allow you to test the OpenCPU service
