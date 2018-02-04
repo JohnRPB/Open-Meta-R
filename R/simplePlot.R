@@ -9,7 +9,7 @@
 
 simplePlot <- function(json) {
   df <- data.frame(jsonlite::fromJSON(json))
-  df <- df[df$active == true,]
+  df <- df[df$active == TRUE,]
   
   ## ggplot2::qplot(df$x, df$y, geom = "line")
   ggplot2::ggplot(data = df, ggplot2::aes(x = sampleSize, y = testStatVal)) + ggplot2::geom_point()
