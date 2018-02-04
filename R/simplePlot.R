@@ -8,9 +8,10 @@
 #' @examples
 #' simplePlot()
 
-simplePlot <- function(x, y) {
-  df <- data.frame(x = x, y = y)
+simplePlot <- function(json = "~/Documents/SoftwareDevelopment/VikingCodeSchool/final_project/openMeta/src/dbstudiesJSON.json") {
+  df <- data.frame(jsonlite::fromJSON(json))
+  
   ## ggplot2::qplot(df$x, df$y, geom = "line")
-  ggplot2::ggplot(data = df, ggplot2::aes(x = x, y =y)) + ggplot2::geom_point()
+  ggplot2::ggplot(data = df, ggplot2::aes(x = sampleSize, y = testStatVal)) + ggplot2::geom_point()
 }
 
