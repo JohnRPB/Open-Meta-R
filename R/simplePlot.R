@@ -7,7 +7,7 @@
 #' @examples
 #' simplePlot()
 
-simplePlot <- function(json = "~/Documents/SoftwareDevelopment/VikingCodeSchool/final_project/openMeta/src/dbstudiesJSON.json") {
+simplePlot <- function(json) {
   df <- data.frame(jsonlite::fromJSON(json))
   
   ## ggplot2::qplot(df$x, df$y, geom = "line")
