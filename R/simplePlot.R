@@ -36,11 +36,14 @@ simplePlot <- function(json = "~/Documents/SoftwareDevelopment/VikingCodeSchool/
   aes <- ggplot2::aes
   geom_point <- ggplot2::geom_point
   
+  ggplotly <- plotly::ggplotly
+  
   #'------------------------------------------------------------------------
   #' CUSTOM MODULE CODE
   #'------------------------------------------------------------------------
   #' Put your primary code below
   
-  ggplot(data = df, aes(x = sampleSize, y = testStatVal)) + geom_point()
+  plot <- ggplot(data = df, aes(x = sampleSize, y = testStatVal)) + geom_point()
+  ggplotly(plot)
 }
 
