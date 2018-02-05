@@ -37,6 +37,7 @@ simplePlot <- function(json = "~/Documents/SoftwareDevelopment/VikingCodeSchool/
   geom_point <- ggplot2::geom_point
   
   ggplotly <- plotly::ggplotly
+  saveWidget <- htmlwidgets::saveWidget
   
   #'------------------------------------------------------------------------
   #' CUSTOM MODULE CODE
@@ -44,6 +45,8 @@ simplePlot <- function(json = "~/Documents/SoftwareDevelopment/VikingCodeSchool/
   #' Put your primary code below
   
   plot <- ggplot(data = df, aes(x = sampleSize, y = testStatVal)) + geom_point()
-  ggplotly(plot)
+  p <- ggplotly(plot)
+  saveWidget(p, "mymap.html", selfcontained = FALSE) 
+  p
 }
 
