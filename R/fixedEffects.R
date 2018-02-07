@@ -1,6 +1,6 @@
-#' A test function
+#' A funnel plot
 #'
-#' This function was created to allow you to test the OpenCPU service
+#' This function allows you to generate funnel plots with OpenMeta.
 #' @param df json array
 #' @keywords ocpu
 #' @export
@@ -30,21 +30,14 @@ simplePlot <- function(json = "~/Documents/SoftwareDevelopment/VikingCodeSchool/
   #' functions from those dependencies that you need, below, like so:
   #' functionNeeded <- packageUsed::functionNeeded
   
-  ggplot <- ggplot2::ggplot
-  aes <- ggplot2::aes
-  geom_point <- ggplot2::geom_point
-  
-  ggplotly <- plotly::ggplotly
-  saveWidget <- htmlwidgets::saveWidget
+  rma <- metafor::rma
   
   #'------------------------------------------------------------------------
   #' CUSTOM MODULE CODE
   #'------------------------------------------------------------------------
   #' Put your primary code below
   
-  plot <- ggplot(data = df, aes(x = sampleSize, y = testStatVal)) + geom_point()
-  p <- ggplotly(plot, dynamicTicks=TRUE, hoverinfo="text", text = ~paste('Study: ', df$name))
-  saveWidget(p, "mymap.html", selfcontained = FALSE) 
-  p
+  
+  
 }
 

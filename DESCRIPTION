@@ -12,4 +12,5 @@ Imports:
   ggplot2,
   jsonlite,
   plotly,
-  htmlwidgets
+  htmlwidgets,
+  metafor
