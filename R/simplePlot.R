@@ -45,6 +45,7 @@ simplePlot <- function(json = "~/Documents/SoftwareDevelopment/VikingCodeSchool/
   plot <- ggplot(data = df, aes(x = sampleSize, y = testStatVal)) + geom_point()
   p <- ggplotly(plot, dynamicTicks=TRUE, hoverinfo="text", text = ~paste('Study: ', df$name))
   saveWidget(p, "mymap.html", selfcontained = FALSE) 
+  plot
   p
 }
 
